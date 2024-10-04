@@ -1,3 +1,4 @@
+{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +10,13 @@
     <meta name="author" content="Your Name"> <!-- Author of the page -->
     <meta name="robots" content="index, follow"> <!-- Instruct search engines to index the page -->
     
-    <title>StudyMate </title>
+    <title>StudyMate</title>
+    {% tailwind_css %}
 </head>
 <body>
     {% block content %}
-
-    {% endblock%}
+   
+    {% endblock %}
+    <h1>hello</h1>
 </body>
 </html>
