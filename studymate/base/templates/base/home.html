@@ -38,9 +38,18 @@
       </div>
     </div>
   </section>
-  {%for room in rooms%}
-<div>
-  <h1>{{room.name}}</h1>
-</div>
-  {%endfor%}
+
+  <h1>Available Rooms</h1>
+  <ul>
+      {% for room in Rooms %}
+          <li>
+              <h2>{{ room.name }}</h2>
+              <p>{{ room.description }}</p>
+              <p>Created at: {{ room.created }}</p>
+              <p>Updated at: {{ room.updated }}</p>
+          </li>
+      {% empty %}
+          <li>No rooms available</li>
+      {% endfor %}
+  </ul>
 {% endblock %}
