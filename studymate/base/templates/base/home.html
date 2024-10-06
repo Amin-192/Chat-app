@@ -1,4 +1,4 @@
-{% extends "base/base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
   <!-- Hero Section -->
@@ -38,4 +38,9 @@
       </div>
     </div>
   </section>
+  {%for room in rooms%}
+<div>
+  <h1>{{room.name}}</h1>
+</div>
+  {%endfor%}
 {% endblock %}
