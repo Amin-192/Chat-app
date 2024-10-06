@@ -39,6 +39,7 @@
     </div>
   </section>
 
+  <!-- Available Rooms Section -->
   <h1>Available Rooms</h1>
   <ul>
       {% for room in Rooms %}
@@ -52,4 +53,15 @@
           <li>No rooms available</li>
       {% endfor %}
   </ul>
+
+  <!-- Users Section -->
+  <h1>Available Users</h1>
+  <ul>
+      {% for User in Users %}
+          <li>{{ user.username }}</li>  <!-- Assuming you are using the default User model -->
+      {% empty %}
+          <li>No users available</li>
+      {% endfor %}
+  </ul>
+
 {% endblock %}
